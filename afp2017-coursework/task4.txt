@@ -1,0 +1,12 @@
+Mary is no longer in the bedroom
+Daniel moved to the hallway
+Fred is either in the school or the park
+Mary went to the office
+Bill is either in the kitchen or the park
+Fred moved to the cinema
+Sandra moved to the bedroom
+Sandra is no longer in the bedroom
+Fred is in the office
+Bill moved to the cinema
+Daniel is either in the office or the kitchen
+Bill is no longer in the cinema

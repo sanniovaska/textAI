@@ -1,0 +1,49 @@
+entrypoints Entry ;
+terminator Entry "\n" ;
+
+--Entries
+EQuestion. Entry ::= Question "?" ;
+EState. Entry ::= Statement ;
+
+--Statements
+Location. Statement ::= Person LocVerb "the" Place ;
+EitherLoc. Statement ::= Person "is either in the" Place "or the" Place ;
+NotLoc. Statement ::= Person "is no longer in the" Place ;
+Take. Statement ::= Person TakeVerb "the" Object ;
+Drop. Statement ::= Person DropVerb "the" Object ;
+Hand. Statement ::= Person HandVerb "the" Object "to" Person ;
+Dir. Statement ::= "The" Place "is" EDirection "of the" Place ;
+
+--Location verbs
+Visin. LocVerb ::= "is in" ;
+Vmoved. LocVerb ::= "moved to" ;
+Vjourneyed. LocVerb ::= "journeyed to" ;
+Vwent. LocVerb ::= "went to" ;
+Vtravelled. LocVerb ::= "travelled to" ;
+
+--Object verbs
+Vtake. TakeVerb ::= "took" ;
+Vpick. TakeVerb ::= "picked up" ;
+Vgot. TakeVerb ::= "got" ;
+Vdrop. DropVerb ::= "dropped" ;
+Vdisc. DropVerb ::= "discarded" ;
+Vhand. HandVerb ::= "handed" ;
+
+--Questions
+PerLoc. Question ::= "Is" Person "in the" Place ;
+ObjLoc. Question ::= "Where is the" Object ;
+HowMany. Question ::= "How many objects is" Person "carrying" ;
+Before. Question ::= "Where was" Person "before the" Place ;
+After. Question ::= "Where was" Person "after the" Place ;
+Path. Question ::= "How do you go from the" Place "to the" Place ;
+
+--Things
+EPerson. Person ::= Ident ;
+EPlace.  Place ::= Ident ;
+EObject. Object ::= Ident ;
+
+--Directions
+Dnorth. EDirection ::= "north" ;
+Deast. EDirection ::= "east" ;
+Dsouth. EDirection ::= "south" ;
+Dwest. EDirection ::= "west" ;
